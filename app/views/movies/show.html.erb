@@ -1,0 +1,14 @@
+<h1><%= @movie.title %></h1>
+
+
+<p>
+  <%= link_to "Home", "/movies" %>
+</p>
+
+<img src="/assets/<%= @movie.title.gsub(' ', '_').downcase %>.jpg" width="200">
+
+<p><strong>Year:</strong> <%= @movie.year %></p>
+
+
+
+

@@ -1,0 +1,14 @@
+<h1>Movies</h1>
+
+<%= link_to "Add a New Movie", "/movies/new" %>
+
+<ul>
+  <% @movies.each do |movie| %>
+    <li>
+      <%= link_to movie.title, "/movies/#{movie.id}"  %>
+      <%= link_to "Edit", "/movies/#{movie.id}/edit" %>
+      <%= link_to "Delete", "/movies/",
+          :method => 'delete', :data => { confirm: 'Are you sure?' } %>
+    </li>
+  <% end %>
+</ul>
