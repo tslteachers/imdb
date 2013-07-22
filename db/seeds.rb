@@ -6,7 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-
 list_of_movies = [
   { title: 'Lincoln', year: 2012 },
   { title: 'Apollo 13', year: 1995 },
@@ -21,3 +20,16 @@ list_of_movies.each do |movie_data|
   m.year = movie_data[:year]
   m.save
 end
+
+
+
+
+
+
+
+
+# director_names = ["Ron Howard", "Steven Spielberg", "George Lucas"]
+# Ron Howard directed Apollo 13
+# George Lucas directed Star Wars
+# Steven Spielberg directed Lincoln and Raiders of the Lost Ark
+

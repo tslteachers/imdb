@@ -5,7 +5,7 @@
 <ul>
   <% @movies.each do |movie| %>
     <li>
-      <%= link_to movie.title, "/movies/#{movie.id}"  %>
+      <%= link_to "#{movie.title} (#{movie.year})", "/movies/#{movie.id}"  %>
       <%= link_to "Edit", "/movies/#{movie.id}/edit" %>
       <%= link_to "Delete", "/movies/",
           :method => 'delete', :data => { confirm: 'Are you sure?' } %>
