@@ -7,7 +7,7 @@
     <li>
       <%= link_to "#{movie.title} (#{movie.year})", "/movies/#{movie.id}"  %>
       <%= link_to "Edit", "/movies/#{movie.id}/edit" %>
-      <%= link_to "Delete", "/movies/",
+      <%= link_to "Delete", "/movies/#{movie.id}",
           :method => 'delete', :data => { confirm: 'Are you sure?' } %>
     </li>
   <% end %>
