@@ -2,6 +2,9 @@ Imdb::Application.routes.draw do
 
   # This file has no bugs in it, but others do.
 
+  # get "/" => 'movies#index'
+  root "movies#index"
+
   # Create
   get "/movies/new" => 'movies#new'
   post "/movies" => 'movies#create'
