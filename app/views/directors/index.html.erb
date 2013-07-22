@@ -1,0 +1,11 @@
+<h1>Directors</h1>
+
+
+<ul>
+  <% @directors.each do |director| %>
+    <li><%= link_to director.name, "/directors/#{director.id}" %>
+      <%= link_to "Edit", "/directors/#{director.id}/edit" %>
+      <%= link_to "Toast", "/directors/#{director.id}", method: 'delete' %>
+    </li>
+  <% end %>
+</ul>

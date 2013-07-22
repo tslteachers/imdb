@@ -1,6 +1,16 @@
 Imdb::Application.routes.draw do
 
-  # This file has no bugs in it, but others do.
+  get '/directors' => 'directors#index'
+  get '/directors/new' => 'directors#new'
+
+  get '/directors/:id' => 'directors#show'
+  post '/directors' => 'directors#create'
+
+  get '/directors/:id/edit' => 'directors#edit'
+  patch '/directors/:id' => 'directors#update'
+
+  delete '/directors/:id' => 'directors#destroy'
+
 
   # get "/" => 'movies#index'
   root "movies#index"

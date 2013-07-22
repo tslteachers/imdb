@@ -5,10 +5,12 @@ class MoviesController < ApplicationController
   end
 
   def show
+    x = 1
     @movie = Movie.find_by_id(params[:id])
   end
 
   def new
+    @greeting = "Wazzzzzup!"
   end
 
   def create
