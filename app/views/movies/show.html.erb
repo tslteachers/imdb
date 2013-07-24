@@ -8,7 +8,7 @@
 
 <p><strong>Year:</strong> <%= @movie.year %></p>
 
-<p><strong>Director:</strong> <%= @movie.director.name %></p>
+<p><strong>Director:</strong> <%= link_to @movie.director.name, "/directors/#{@movie.director.id}" %></p>
 
 
 

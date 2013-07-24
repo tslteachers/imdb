@@ -9,7 +9,6 @@ class MoviesController < ApplicationController
   end
 
   def new
-    @greeting = "Wazzzzzup!"
   end
 
   def create
