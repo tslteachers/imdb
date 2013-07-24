@@ -15,6 +15,7 @@ class MoviesController < ApplicationController
     new_movie = Movie.new
     new_movie.title = params[:title]
     new_movie.year = params[:year]
+    new_movie.director_id = params[:director_id]
     new_movie.save
     redirect_to "http://localhost:3000/movies"
   end

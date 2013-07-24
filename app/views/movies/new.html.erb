@@ -7,6 +7,18 @@
   <p><label>Title:</label><input type="text" name="title" size="60"></p>
 
   <p><label>Year:</label><input type="text" name="year" size="5"></p>
+  <label>Director:</label>
+
+  <%= select_tag :director_id,
+      options_from_collection_for_select(Director.all, :id, :name)
+   %>
+
+<!--   <select name="director_id">
+    <%# Director.all.each do |director| %>
+      <option value="<%#= director.id %>"><%#= director.name %></option>
+    <%# end %>
+  </select>
+ -->
   <p>
     <input type="submit" value="Add This Movie">
     or
