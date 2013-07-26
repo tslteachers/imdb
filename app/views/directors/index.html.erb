@@ -1,11 +1,12 @@
 <h1>Directors</h1>
 
+<%= link_to "Movies", movies_url %>
 
 <ul>
   <% @directors.each do |director| %>
-    <li><%= link_to director.name, "/directors/#{director.id}" %>
-      <%= link_to "Edit", "/directors/#{director.id}/edit" %>
-      <%= link_to "Toast", "/directors/#{director.id}", method: 'delete' %>
+    <li><%= link_to director.name, director_url(director.id) %>
+      <%= link_to "Edit", edit_director_url(director.id) %>
+      <%= link_to "Toast", director_url(director.id), method: 'delete' %>
     </li>
   <% end %>
 </ul>

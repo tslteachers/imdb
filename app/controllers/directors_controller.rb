@@ -12,7 +12,7 @@ class DirectorsController < ApplicationController
     d = Director.new
     d.name = params[:name]
     d.save
-    redirect_to "http://localhost:3000/directors"
+    redirect_to directors_url
   end
 
   def edit
@@ -23,7 +23,7 @@ class DirectorsController < ApplicationController
     d = Director.find(params[:id])
     d.name = params[:name]
     d.save
-    redirect_to "http://localhost:3000/directors"
+    redirect_to directors_url
   end
 
   def destroy

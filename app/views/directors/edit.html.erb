@@ -1,7 +1,7 @@
 <h1>Edit Director</h1>
 
 
-<%= form_tag "/directors/#{@director.id}", method: 'patch' do %>
+<%= form_tag director_url(@director.id), method: 'patch' do %>
   <%= label_tag :name %>
   <%= text_field_tag :name, @director.name %>
   <%= submit_tag %>

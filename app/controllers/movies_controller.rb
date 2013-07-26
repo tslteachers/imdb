@@ -17,7 +17,7 @@ class MoviesController < ApplicationController
     new_movie.year = params[:year]
     new_movie.director_id = params[:director_id]
     new_movie.save
-    redirect_to "http://localhost:3000/movies"
+    redirect_to movies_url
   end
 
   def edit
@@ -29,13 +29,13 @@ class MoviesController < ApplicationController
     movie.title = params[:title]
     movie.year = params[:year]
     movie.save
-    redirect_to "http://localhost:3000/movies"
+    redirect_to movies_url
   end
 
   def destroy
     movie = Movie.find_by_id(params[:id])
     movie.destroy
-    redirect_to "http://localhost:3000/movies"
+    redirect_to movies_url
   end
 
 end
