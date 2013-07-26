@@ -1,8 +1,21 @@
 Imdb::Application.routes.draw do
 
-  # CHALLENGE:  Name as many routes as you need
-  # so that you can use named helper methods in the views
-  # and controllers instead of hardcoded URLs.
+  # Routes for the Actor resource:
+  # CREATE
+  get '/actors/new', controller: 'actors', action: 'new', as: 'new_actor'
+  post '/actors', controller: 'actors', action: 'create'
+
+  # READ
+  get '/actors', controller: 'actors', action: 'index'
+  get '/actors/:id', controller: 'actors', action: 'show', as: 'actor'
+
+  # UPDATE
+  get '/actors/:id/edit', controller: 'actors', action: 'edit', as: 'edit_actor'
+  patch '/actors/:id', controller: 'actors', action: 'update'
+
+  # DELETE
+  delete '/actors/:id', controller: 'actors', action: 'destroy'
+  #------------------------------
 
   get '/directors' => 'directors#index'
   get '/directors/new' => 'directors#new'
